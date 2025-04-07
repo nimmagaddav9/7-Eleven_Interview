@@ -143,3 +143,56 @@ Explanation:
 
         Before killing the component componentWillUnmount is executed.
         death method --> perform cleanup operations
+
+
+9. Call() -- if we want to create second memory location will interact with 1st memory location.
+
+Apply – if we want to pass array instead of independent parameter
+
+Bind() - merge memory location 1 and memory location 2 -->merge 2 memory locations-->new memory location.
+
+What is the USE? Call function advanced function APPLY, call and apply advanced version is bind().
+Purpose is same. Call, bind, apply –used to access 2 objects in different memory location
+
+10. What is the current ES version? ES6 -2015, ES9, JS24
+
+11. What are different positions in CSS ?
+The position property specifies the type of positioning method used for an element.
+
+There are five different position values:
+
+static: HTML elements are positioned static by default.
+
+relative: An element with position: relative; is positioned relative to its normal position.
+
+fixed: An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. 
+The top, right, bottom, and left properties are used to position the element.
+
+absolute: An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+
+sticky: An element with position: sticky; is positioned based on the user's scroll position.
+
+
+12. What is shallow copy and deep copy? 
+
+A shallow copy creates a new object with references to the same memory locations as the original object for nested properties. 
+This means changes to nested objects in the copy will affect the original object.
+
+javascript example: 
+const originalObject = { a: 1, b: { c: 2 } };
+const shallowCopy = { ...originalObject };
+
+shallowCopy.b.c = 3;
+console.log(originalObject.b.c); // Output: 3
+
+Deep Copy
+A deep copy creates a new object with new memory locations for all nested properties, ensuring changes to the copy don't affect the original object.
+
+JavaScript Example:
+
+javascript
+const originalObject = { a: 1, b: { c: 2 } };
+const deepCopy = JSON.parse(JSON.stringify(originalObject));
+
+deepCopy.b.c = 3;
+console.log(originalObject.b.c); // Output: 2
